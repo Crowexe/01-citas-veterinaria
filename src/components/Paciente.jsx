@@ -1,4 +1,4 @@
-const Paciente = ({paciente}) => {
+const Paciente = ({paciente, setPaciente}) => {
 
     console.log(paciente)
     const { nombre, propietario, email, fecha, sintomas, id } = paciente
@@ -28,6 +28,7 @@ const Paciente = ({paciente}) => {
             <div className="flex justify-between mt-10 ">
                 <button 
                     type="button"
+                    onClick={() => setPaciente(paciente)}
                     className="py-2 px-10 bg-indigo-600 hover:bg-indigo-900 text-white font-bold uppercase rounded-md"
                 >
                     Editar
