@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react';
 import Error from './Error';
 
-const Formulario = ({pacientes,setPacientes}) => {
+const Formulario = ({pacientes,setPacientes, paciente}) => {
 
 	const [nombre, setNombre] = useState('');
 	const [propietario, setPropietario] = useState('');
@@ -10,6 +10,11 @@ const Formulario = ({pacientes,setPacientes}) => {
 	const [sintomas, setSintomas] = useState('');
 
 	const [error, setError] = useState(false)
+
+	useEffect(() => {
+		console.log('aadas')
+	},[paciente])
+
 
 	const generarId = () => {
 		const random = Math.random().toString(36).substr(2)
@@ -23,7 +28,6 @@ const Formulario = ({pacientes,setPacientes}) => {
 
 		// Validar
 		if([nombre, propietario, email, fecha, sintomas].includes('')){
-			console.log('Hay al menos un campoco vacío')
 			setError(true)
 			return;
 		} 
@@ -54,7 +58,7 @@ const Formulario = ({pacientes,setPacientes}) => {
 			<>
 				<div className="md:w-1/2 lg:w-2/5 mx-5">
 					<h2 className="font-black text-3xl text-center">Seguimiento de Pacientes</h2>
-					<p className="text-lg mt-5 text-center mb-10  font-bold">
+					<p className="text-lg mt-5 text-center mb-10 font-bold">
 					Añade pacientes y {''}
 					<span className="text-indigo-600">Administralos</span>
 					</p>

@@ -1,6 +1,11 @@
 import Paciente from "./Paciente"
+import { useEffect } from "react"
 
 const ListadoPacientes = ({pacientes, setPaciente}) => {
+
+    useEffect(() => {
+        console.log(pacientes)
+    }, [pacientes])
 
 
     return (

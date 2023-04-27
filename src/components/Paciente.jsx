@@ -1,6 +1,8 @@
+import { useEffect } from "react"
+
 const Paciente = ({paciente, setPaciente}) => {
 
-    console.log(paciente)
+
     const { nombre, propietario, email, fecha, sintomas, id } = paciente
 
     return (
