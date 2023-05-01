@@ -80,7 +80,7 @@ const Formulario = ({pacientes, setPacientes, paciente, setPaciente}) => {
 					<h2 className="font-black text-3xl text-center text-white">Seguimiento de Pacientes</h2>
 					<p className="text-lg mt-5 text-center mb-10 font-bold text-white">
 					Añade pacientes y {''}
-					<span className="text-indigo-600">Administralos</span>
+					<span className="text-indigo-600">administralos</span>
 					</p>
 					<form
 						onSubmit={handleSubmit}
